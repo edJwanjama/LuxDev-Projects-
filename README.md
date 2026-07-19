@@ -1,6 +1,7 @@
-EXCEL ASSIGNMENT l OUTPUT: (Cleanup, analysis, scenario modelling, interactive dashboard and summary) https://docs.google.com/spreadsheets/d/1orxERNkyUuCPECWBq03imlPKHlzEMVH2/edit?usp=sharing&ouid=101413482149704630603&rtpof=true&sd=true
+ASSIGNMENT l OUTPUT: (Cleanup, analysis, scenario modelling, interactive dashboard and summary) https://docs.google.com/spreadsheets/d/1orxERNkyUuCPECWBq03imlPKHlzEMVH2/edit?usp=sharing&ouid=101413482149704630603&rtpof=true&sd=true
 
 Summary of data issues found, cleaning rules, and assumptions in dataset:
+
 Data Issues Found:
 Duplicate Rows: Some transactions were present more than once, with all columns identical.
 Data Type Mismatches: Dates and numeric columns were sometimes stored as text, causing errors in analysis.
@@ -27,13 +28,14 @@ Replaced RequiredDate with OrderDate + 5 days if error detected.
 Derived ‘LeadTimeDays’:
 Calculated as RequiredDate minus OrderDate (in days).
 
-Key Assumptions
+Key Assumptions:
 Imputation: When imputing missing values, business logic preferred the “most typical” value at the most granular level available, to best reflect real operations (e.g., City mode within each Country).
 Discount Maximum: No legitimate orders are allowed above a 30% discount (business policy).
 Lead Times: In case of illogical shipping/required dates, a 5-day lead time is assumed as a correction.
 PriceBand: “Low/Medium/High” price bands are defined using quantiles across all products.
 
 DASHBOARD SUMMARY OF INSIGHTS:
+
 a)  Region: North America → Revenue trends are steadily rising month-over-month, but online channel is cannibalizing retail, with ~60% of recent sales shifting to digital.
 b)  Region: Europe → Highest Gross Profit Margin % (~32%), driven by strong premium product sales; however, high discounts (>20%) are concentrated among two salespeople in France.
 c) Region: Asia-Pacific → Shows fastest revenue growth but lowest On-Time % (~68%), it is possibles logistics/lead time challenges could affect customer satisfaction.
